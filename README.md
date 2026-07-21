@@ -28,6 +28,13 @@ This project aimed to:
 - Identify the most appropriate model for healthcare screening applications.
 
 ---
+## 🌟 Project Highlights
+
+- Compared **4 supervised machine learning algorithms**.
+- Performed **hyperparameter tuning using GridSearchCV**.
+- Optimized models using **Recall** as the primary scoring metric.
+- Evaluated models using multiple performance metrics.
+- Demonstrated why **accuracy alone can be misleading** for imbalanced healthcare datasets.
 
 ## Dataset
 
@@ -50,6 +57,11 @@ The dataset contains patient demographic and clinical information including:
   - 0 = No Stroke
   - 1 = Stroke
 
+## 📊 Class Distribution
+
+The dataset is highly imbalanced, with significantly fewer stroke cases than non-stroke cases. This imbalance explains why accuracy alone is not an appropriate evaluation metric for this problem and reinforces the importance of Recall during model evaluation.
+
+![Class Distribution](images/class_distribution.png)
 ---
 
 ## Data Preprocessing
@@ -142,12 +154,21 @@ This demonstrates how evaluation metrics should be aligned with the real-world p
 ## Model Performance
 
 | Model | Accuracy | Precision | Recall | F1-score |
-|--------|---------:|----------:|--------:|----------:|
-| Logistic Regression | **0.620** | **0.100** | **0.84** | **0.178** |
-| Gaussian Naïve Bayes | 0.381 | 0.072 | **0.98** | 0.134 |
-| Support Vector Machine | 0.693 | 0.121 | **0.84** | **0.211** |
-| K-Nearest Neighbours | **0.943** | 0.167 | 0.04 | 0.065 |
+|:------|---------:|----------:|--------:|----------:|
+| 🟢 Logistic Regression | **0.620** | **0.100** | **0.84** | **0.178** |
+| 🔵 Gaussian Naïve Bayes | 0.381 | 0.072 | **0.98** | 0.134 |
+| 🟠 Support Vector Machine | 0.693 | 0.121 | **0.84** | **0.211** |
+| 🟣 K-Nearest Neighbours | **0.943** | 0.167 | 0.04 | 0.065 |
 
+> **Key Insight**
+>
+> Although K-Nearest Neighbours achieved the highest accuracy (94.3%), its recall of only 4% makes it unsuitable for stroke screening because it failed to identify most positive stroke cases. This project therefore demonstrates why healthcare machine learning should not rely solely on accuracy when evaluating predictive models.
+
+## 📊 Model Performance Comparison
+
+The chart below compares the performance of the four machine learning models across the evaluation metrics used in this study.
+
+![Model Comparison](images/model_comparison.png)
 ---
 
 ## Discussion
