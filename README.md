@@ -171,6 +171,13 @@ The chart below compares the performance of the four machine learning models acr
 ![Model Comparison](images/model_comparison.png)
 ---
 
+## 📈 ROC Curve Analysis
+
+The ROC curve compares the ability of probabilistic models to distinguish between stroke and non-stroke cases. Logistic Regression achieved an AUC of 0.838, showing stronger discrimination than Naive Bayes.
+
+![ROC Curve](images/roc_curve.png)
+
+
 ## Discussion
 
 Several important observations emerged from this comparative analysis:
